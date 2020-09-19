@@ -15,9 +15,13 @@ export const SignUp = () => {
     });
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  };
+
   return (
     <div className='container'>
-      <form className='white'>
+      <form onSubmit={handleSubmit} className='white'>
         <h5 className='grey-text text-darken-3'>Sign Up</h5>
         <div className='input-field'>
           <label htmlFor='firstName'>First Name</label>
@@ -51,7 +55,7 @@ export const SignUp = () => {
           />
         </div>
         <div className='input-field'>
-          <button className='btn pink lighten-1 z-depth-0'>Login</button>
+          <button className='btn pink lighten-1 z-depth-0'>Sign Up</button>
         </div>
       </form>
     </div>

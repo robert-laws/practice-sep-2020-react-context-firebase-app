@@ -3,7 +3,7 @@ import 'materialize-css/dist/css/materialize.min.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Navbar } from './components/layout';
 import { Dashboard } from './components/dashboard';
-import { ProjectDetails } from './components/projects';
+import { ProjectDetails, CreateProject } from './components/projects';
 import { SignIn, SignUp } from './components/auth';
 
 function App() {
@@ -16,6 +16,7 @@ function App() {
           <Route path='/project/:id' component={ProjectDetails} />
           <Route path='/signin' component={SignIn} />
           <Route path='/signup' component={SignUp} />
+          <Route path='/create' component={CreateProject} />
         </Switch>
       </div>
     </Router>
